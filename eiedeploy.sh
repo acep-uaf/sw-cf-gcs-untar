@@ -1,12 +1,18 @@
-gcloud functions deploy sw-cf-gcs-untar \
-  --gen2 \
-  --runtime=python311 \
-  --region=us-west1 \
-  --service-account=untar-ingest@acep-ext-eielson-2021.iam.gserviceaccount.com \
-  --source=src \
-  --entry-point=gcs_event_to_pubsub \
-  --trigger-event-filters="type=google.cloud.storage.object.v1.finalized" \
-  --trigger-event-filters="bucket=sw-eielson-tar-archive" \
-  --memory 16384MB \
-  --timeout 540s  \
-  --set-env-vars PROJECT_ID=acep-ext-eielson-2021,TOPIC_NAME=sw-df-untar,FILE_EXTENSION=.tar.gz 
+ #!/bin/bash
+
+  # Source the .env file
+  source eiedeploy.env
+
+  # Deploy the function
+  gcloud functions deploy sw-cf-gcs-untar \
+    --$GEN2 \
+    --runtime=$RUNTIME \
+    --region=$REGION \
+    --service-account=$SERVICE_ACCOUNT \
+    --source=$SOURCE \
+    --entry-point=$ENTRY_POINT \
+    --trigger-event-filters=$TRIGGER_EVENT_FILTER1 \
+    --trigger-event-filters=$TRIGGER_EVENT_FILTER2 \
+    --memory=$MEMORY \
+    --timeout=$TIMEOUT \
+    --set-env-vars PROJECT_ID=$PROJECT_ID,TOPIC_NAME=$TOPIC_NAME,FILE_EXTENSION=$FILE_EXTENSION
