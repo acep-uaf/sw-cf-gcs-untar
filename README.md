@@ -71,7 +71,7 @@ Replace `<value>` with the appropriate values for your deployment.
 Below are descriptions for each environment variable used in the deployment script:
 
 - **GEN2**=`<value>`:
-  - Description: Specifies the generation of the Cloud Function to deploy. Google Cloud Functions has multiple generations and this denotes which one you intend to use.
+  - Description: Specifies the generation of the Cloud Function to deploy. For example: `gen2` when you intend to deploy a second generation Google Cloud Function.
   
 - **RUNTIME**=`<value>`:
   - Description: Specifies the runtime environment in which the Cloud Function executes. For example: `python311` for Python 3.11.
@@ -80,7 +80,7 @@ Below are descriptions for each environment variable used in the deployment scri
   - Description: The Google Cloud region where the Cloud Function will be deployed and run. Example values are `us-west1`, `europe-west1`, etc.
   
 - **SERVICE_ACCOUNT**=`<value>`:
-  - Description: The service account under which the Cloud Function will run. This defines the permissions that the Cloud Function has during execution.
+  - Description: The service account under which the Cloud Function will run. This defines the permissions that the Cloud Function has at deployment.
   
 - **SOURCE**=`<value>`:
   - Description: Path to the source code of the Cloud Function. Typically, this points to a directory containing all the necessary files for the function.
