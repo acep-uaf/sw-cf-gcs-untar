@@ -109,7 +109,7 @@ Below are descriptions for each environment variable used in the deployment scri
 - **FILE_EXTENSION**=`<value>`:
   - Description: The file extension that the Cloud Function checks for in the GCS bucket. For this function, it's typically set to `.tar.gz`.
 
-Ensure to set each `<value>` in the `eiedeploy.env` file appropriately before deploying the Cloud Function. **Note:** For security reasons, do not cheeck the `eiedeploy.env` with set values into a public repository such as github.
+Set each `<value>` in the `eiedeploy.env` file appropriately before deploying the Cloud Function. **Note:** For security reasons, do not cheeck the `eiedeploy.env` with values set into a public repository such as github.
 
 
 
