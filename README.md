@@ -1,4 +1,10 @@
 # SW-CF-GCS-UNTAR Cloud Function
+<br>
+
+Welcome to the `sw-cf-gcs-untar` repository, a crucial component of the ACEP SW Data Pipeline. This repository is specifically designed to manage the functions associated with the archival and notification process when a `.tar.gz` archive is uploaded to a specific GCP bucket.
+
+For a comprehensive understanding of how this repository fits into the larger system, please refer to the overarching [ACEP SW Data Pipeline Overview](https://github.com/acep-uaf/sw-stack) repository.
+
 
 The `sw-cf-gcs-untar` is a Cloud Function written in Python, designed to respond to change events in a Google Cloud Storage (GCS) bucket and publish a message to a Pub/Sub topic. The code checks if the changed file has a `.tar.gz` extension and processes it accordingly.
 
@@ -49,7 +55,7 @@ Deploy the Cloud Function with the provided shell script:
 
  You should have an `eiedeploy.env` file with the following variables defined:
 
- ```
+ ```bash
  GEN2=<value>
  RUNTIME=<value>
  REGION=<value>
