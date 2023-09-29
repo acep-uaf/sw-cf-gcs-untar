@@ -121,6 +121,23 @@ Set each `<value>` in the `eiedeploy.env` file appropriately before deploying th
 
 ### Dependencies
  
- The Cloud Function's dependencies are listed in the `requirements.txt` file and include the `google-cloud-pubsub` and `google-cloud-storage` packages.
+ The Cloud Function's dependencies are listed in the `requirements.txt` file and include:
+ - `google-cloud-pubsub`
+ - `google-cloud-storage`
+
+---
+
+### Conclusion
+
+The `sw-cf-gcs-untar` repository is a pivotal piece of the ACEP SW Data Pipeline. By being a Cloud Function designed to interact with Google Cloud Storage (GCS) and Pub/Sub, it provides real-time feedback and control over `.tar.gz` archives uploaded to a designated GCP bucket.
+
+This repository exemplifies a seamless integration between cloud storage, event-driven computing, and messaging on the Google Cloud Platform. As files are added or changed in the bucket, `sw-cf-gcs-untar` becomes a sentinel, promptly sending signals via Pub/Sub. Thus, any subscribed services or applications can react instantly, furthering the efficiency and automation of the entire pipeline.
+
+We encourage the open-source community to dive into this repository, understanding its nuances and, if possible, contributing to its improvement. For detailed licensing information, please refer to the [LICENSE](https://github.com/acep-uaf/sw-cf-gcs-untar/blob/main/LICENSE) file located in the repository's root.
+
+Thank you for your interest in this solution, and we anticipate that it will significantly bolster your data handling capabilities within the GCP ecosystem.
+
+---
+
 
 
